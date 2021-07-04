@@ -34,7 +34,7 @@ RUN powershell -command Add-WindowsFeature Web-CGI
 RUN powershell -command Remove-Item C://vc11.exe,C://vc1186.exe,C://vc_redist.x64.exe,C://vc_redist.x86.exe,msodbcsql.msi -Force
 
 # Setup php config in IIS
-ADD 'https://raw.githubusercontent.com/caio-brendo/docker-iis-php5.6/v1.0.0/src/config/applicationHost.config' C://Windows//System32//inetsrv//applicationHost.config
+ADD 'https://raw.githubusercontent.com/caio-brendo/docker-iis-php5.6/v1.0.0/src/config/applicationHost.config' C://Windows//System32//inetsrv//config//applicationHost.config
 ADD 'https://raw.githubusercontent.com/caio-brendo/docker-iis-php5.6/v1.0.0/src/config/php.ini' C://php//php.ini
 ADD 'https://raw.githubusercontent.com/caio-brendo/docker-iis-php5.6/v1.0.0/src/config/index.php' C://inetpub//wwwroot//default//index.php
 ADD 'https://raw.githubusercontent.com/caio-brendo/docker-iis-php5.6/v1.0.0/src/config/web.config' C://inetpub//wwwroot//default//web.config
